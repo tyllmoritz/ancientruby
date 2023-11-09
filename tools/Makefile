@@ -15,6 +15,10 @@ tools := \
 all: $(tools)
 	@:
 
+lzcomp: CFLAGS += -flto -Wno-strict-overflow -Wno-sign-compare
+lzcomp: $(wildcard lz/*.c) $(wildcard lz/*.h)
+	$(CC) $(CFLAGS) -o $@ lz/*.c
+
 clean:
 	rm -f $(tools)
 

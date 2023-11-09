@@ -126,7 +126,7 @@ PetalburgHouse2_Blocks:
 PetalburgHouse1_Blocks:
 	INCBIN "maps/House3.ablk"
 
-SafariZoneFuchsiaGateBeta_Blocks
+SafariZoneFuchsiaGateBeta_Blocks:
 Route34IlexForestGate_Blocks:
 Route6SaffronGate_Blocks:
 Route40BattleTowerGate_Blocks:

@@ -1071,7 +1071,7 @@ Function1064d8:
 	ld [rSVBK], a
 	jr asm_1064ed
 
-asm_1064ed
+asm_1064ed:
 	ld de, wDecompressScratch
 	ld b, $0
 	ld a, [rSVBK]

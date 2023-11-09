@@ -621,7 +621,7 @@ MovementData_GruntM3:
 	remove_fixed_facing
 	step_end
 	
-MovementData_GruntM4
+MovementData_GruntM4:
 	step UP
 	step UP
 	step_end

@@ -24,7 +24,7 @@ connection: MACRO
 ;\4: x offset for east/west, y offset for north/south
 ;\5: distance offset?
 ;\6: strip length
-if "\1" == "north"
+if !STRCMP("\1", "north")
 	map_id \3
 	dw \2_Blocks + \3_WIDTH * (\3_HEIGHT - 3) + \5
 	dw wOverworldMapBlocks + \4 + 3
@@ -33,7 +33,7 @@ if "\1" == "north"
 	db \3_HEIGHT * 2 - 1
 	db (\4 - \5) * -2
 	dw wOverworldMapBlocks + \3_HEIGHT * (\3_WIDTH + 6) + 1
-elif "\1" == "south"
+elif !STRCMP("\1", "south")
 	map_id \3
 	dw \2_Blocks + \5
 	dw wOverworldMapBlocks + (CURRENT_MAP_HEIGHT + 3) * (CURRENT_MAP_WIDTH + 6) + \4 + 3
@@ -42,7 +42,7 @@ elif "\1" == "south"
 	db 0
 	db (\4 - \5) * -2
 	dw wOverworldMapBlocks + \3_WIDTH + 7
-elif "\1" == "west"
+elif !STRCMP("\1", "west")
 	map_id \3
 	dw \2_Blocks + (\3_WIDTH * \5) + \3_WIDTH - 3
 	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3)
@@ -51,7 +51,7 @@ elif "\1" == "west"
 	db (\4 - \5) * -2
 	db \3_WIDTH * 2 - 1
 	dw wOverworldMapBlocks + \3_WIDTH * 2 + 6
-elif "\1" == "east"
+elif !STRCMP("\1", "east")
 	map_id \3
 	dw \2_Blocks + (\3_WIDTH * \5)
 	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3 + 1) - 3
